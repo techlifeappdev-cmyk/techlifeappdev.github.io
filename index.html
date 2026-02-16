@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Beach Volley, Partite, Trova compagni, Beach Volley Match Maker, Beach Volley Bologna">
+    <meta name="author" content="Marco">
+    <title>Beach Volley Match Maker | Organizza le tue partite</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-icons.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">    
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+      /* Overlay scuro per far risaltare il bianco */
+      #carousel-area::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.65); 
+        z-index: 1;
+      }
+
+      #carousel-area {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('img/slider/bg-3.jpg');
+        background-size: cover;
+        background-position: center;
+        margin-top: 0; /* La navbar è fixed, non serve margine qui */
+        padding-top: 80px;
+        color: #ffffff !important; /* Forza il bianco ovunque */
+        text-align: center;
+      }
+
+      .carousel-caption {
+        position: relative !important;
+        z-index: 2;
+        width: 100% !important;
+        left: 0 !important;
+        padding: 0;
+        margin: 0 auto;
+        color: #ffffff !important;
+      }
+
+      .hero-title {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        line-height: 1.1;
+        margin-bottom: 30px;
+        color: #ffffff !important;
+      }
+
+      .benefit-card i {
+        font-size: 30px;
+        color: #ff6b81;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .benefit-card h6 {
+        color: #ffffff !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      /* Fix per Mobile */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 1.8rem !important;
+          margin-bottom: 20px;
+        }
+        .benefit-card h6 {
+          font-size: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header id="slider-area">  
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" style="font-weight: bold; color: #ff6b81;">BV MATCH MAKER</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link page-scroll" href="#slider-area">Home</a></li>
+              <li class="nav-item"><a class="nav-link page-scroll" href="#how-it-works">Come Funziona</a></li>  
+              <li class="nav-item"><a class="nav-link page-scroll" href="#subscribe" style="font-weight: bold; color: #ff6b81;">Accedi alla Beta</a></li>
+            </ul>              
+          </div>
+        </div>
+      </nav> 
+
+      <div id="carousel-area">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-10">
+                      <div class="carousel-caption">
+                        <h2 class="hero-title wow fadeInDown" data-wow-delay="0.3s">
+                            Il Beach Volley,<br>organizzato meglio.
+                        </h2>
+                        
+                        <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.6s" style="margin-bottom: 30px;">
+                          <div class="col-4 benefit-card">
+                            <i class="lni-users"></i>
+                            <h6>Trova Giocatori</h6>
+                          </div>
+                          <div class="col-4 benefit-card">
+                            <i class="lni-alarm-clock"></i>
+                            <h6>Zero Chat</h6>
+                          </div>
+                          <div class="col-4 benefit-card">
+                            <i class="lni-star"></i>
+                            <h6>Ranking</h6>
+                          </div>
+                        </div>
+
+                        <div class="wow fadeInUp" data-wow-delay="0.9s">
+                          <a href="#subscribe" class="btn btn-lg btn-common btn-effect">
+                            VOGLIO ACCEDERE ALLA BETA
+                          </a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>  
+    </header>
+
+    <!-- sezione How It Works -->
+    <section id="how-it-works" class="section" style="padding: 80px 0; background: #fff;">
+      <div class="container">
+        <div class="section-header text-center">          
+          <h2 class="section-title" style="font-weight: 800;">Come funziona?</h2>
+          <p class="section-subtitle">Tre step, zero stress. Tutto quello che ti serve è la voglia di giocare.</p>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s" style="text-align: center; padding: 30px;">
+              <div class="icon" style="width: 80px; height: 80px; background: #fff5f6; border-radius: 50%; line-height: 80px; margin: 0 auto 20px;">
+                <i class="lni-users" style="font-size: 30px; color: #ff6b81;"></i>
+              </div>
+              <h4 style="font-weight: 700; margin-bottom: 15px;">1. Crea il Gruppo</h4>
+              <p>Unisciti ad una partita o creane una e imposta il livello. Sarà visibile alla community di beachers.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="item-boxes wow fadeInDown" data-wow-delay="0.4s" style="text-align: center; padding: 30px;">
+              <div class="icon" style="width: 80px; height: 80px; background: #fff5f6; border-radius: 50%; line-height: 80px; margin: 0 auto 20px;">
+                <i class="lni-alarm-clock" style="font-size: 30px; color: #ff6b81;"></i>
+              </div>
+              <h4 style="font-weight: 700; margin-bottom: 15px;">2. Riempi il Campo</h4>
+              <p>Man mano che le persone accettano, il tuo gruppo si riempie automaticamente senza dover mandare decine di messaggi su WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="item-boxes wow fadeInDown" data-wow-delay="0.6s" style="text-align: center; padding: 30px;">
+              <div class="icon" style="width: 80px; height: 80px; background: #fff5f6; border-radius: 50%; line-height: 80px; margin: 0 auto 20px;">
+                <i class="lni-phone" style="font-size: 30px; color: #ff6b81;"></i>
+              </div>
+              <h4 style="font-weight: 700; margin-bottom: 15px;">3. Chiama e Gioca</h4>
+              <p>Gruppo fatto! Ora basta una veloce chiamata al centro sportivo per prenotare il campo e iniziare la sfida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">          
+          <h2 class="section-title">Perché scegliere Match Maker?</h2>
+          <span>Vantaggi</span>
+          <p class="section-subtitle">Stiamo selezionando i primi 30 tester a Bologna per rivoluzionare il modo di giocare.</p>
+        </div>
+        </div>
+    </section>
+
+    <div id="subscribe" class="section" style="background: #f9f9f9;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="subscribe-form">
+              <div class="form-wrapper">
+                <div class="sub-title text-center">
+                  <h3>Diventa un Tester Ufficiale</h3>
+                  <p>Riceverai l'invito esclusivo per scaricare l'app.</p>
+                </div>
+                <form action="https://formspree.io/f/TUO_ID" method="POST">
+                  <div class="row">
+                    <div class="col-12 form-line">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Nome completo" required>
+                      </div>
+                    </div>
+                    <div class="col-12 form-line">
+                      <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                      </div> 
+                    </div>
+                    <div class="col-12">
+                      <div class="form-submit">
+                        <button type="submit" class="btn btn-common btn-effect btn-block">Invia Candidatura</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-min.js"></script>
+    </body>
+</html>
