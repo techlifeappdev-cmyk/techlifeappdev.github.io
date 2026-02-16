@@ -51,7 +51,7 @@
       .hero-title {
         font-weight: 800;
         text-transform: uppercase;
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         line-height: 1.1;
         margin-bottom: 30px;
         color: #ffffff !important;
@@ -74,12 +74,25 @@
       /* Fix per Mobile */
       @media (max-width: 768px) {
         .hero-title {
-          font-size: 1.8rem !important;
-          margin-bottom: 20px;
+          font-size: 1.2rem !important;
+          margin-bottom: 15px;
+        }
+        .hero-subtext {
+          font-size: 0.6rem !important;
+          padding: 0 10px;
         }
         .benefit-card h6 {
           font-size: 0.7rem;
         }
+      }
+
+      .hero-subtext {
+        color: #ffffff !important;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        /* Crea un contrasto leggero con il titolo */
+        opacity: 0.9; 
       }
     </style>
   </head>
@@ -108,21 +121,25 @@
                   <div class="col-lg-10">
                       <div class="carousel-caption">
                         <h2 class="hero-title wow fadeInDown" data-wow-delay="0.3s">
-                            Il Beach Volley,<br>organizzato meglio.
+                            Mai più ricerche disperate per il quarto giocatore.
                         </h2>
+
+                        <p class="hero-subtext wow fadeInDown" data-wow-delay="0.4s" style="color: #ffffff; margin-bottom: 35px; font-size: 1.1rem; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            L'app dedicata a chi vuole giocare a Beach Volley a Bologna senza impazzire tra gruppi WhatsApp e messaggi senza risposta.
+                        </p>
                         
                         <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.6s" style="margin-bottom: 30px;">
+                          <div class="col-4 benefit-card">
+                            <i class="lni-alarm-clock"></i>
+                            <h6>Organizza un incontro</h6>
+                          </div>
                           <div class="col-4 benefit-card">
                             <i class="lni-users"></i>
                             <h6>Trova Giocatori</h6>
                           </div>
                           <div class="col-4 benefit-card">
-                            <i class="lni-alarm-clock"></i>
-                            <h6>Addio Caos</h6>
-                          </div>
-                          <div class="col-4 benefit-card">
-                            <i class="lni-calendar"></i>
-                            <h6>Organizza</h6>
+                            <i class="lni-emoji-smile"></i>
+                            <h6>Divertiti</h6>
                           </div>
                         </div>
 
