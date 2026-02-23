@@ -116,6 +116,42 @@
             .hero-title { font-size: 1.8rem; }
             .hero-subtext { font-size: 1.1rem; }
         }
+
+        /* Mockup telefono per lo screenshot */
+        .phone-mockup {
+            max-height: 500px;
+            border: 12px solid #333;
+            border-radius: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+
+        /* Sezione Istruzioni/FAQ */
+        .step-number {
+            background: var(--primary-blue);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .faq-card {
+            border: none;
+            background: #f8f9fa;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .faq-card:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 
@@ -131,6 +167,7 @@
                     <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#carousel-area">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#how-it-works">Come Funziona</a></li>
                     <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#services">Vantaggi</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#faq">FAQ</a></li>
                 </ul>
             </div>
         </div>
@@ -205,7 +242,7 @@
 
     <section id="services" class="section-padding">
         <div class="container text-center">
-            <h2 class="section-title">Perché scegliere Match Maker?</h2>
+            <h2 class="section-title">L'app pensata per i Beachers</h2>
             <div class="row align-items-center mt-5">
                 <div class="col-lg-6 text-left">
                     <div class="mb-4">
@@ -221,9 +258,49 @@
                         <p>Trova compagni e avversari del tuo stesso livello per partite vere.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div style="background: #eee; height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
-                        <span class="text-muted">[Immagine Anteprima App]</span>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="img/app/search_match.jpg" class="img-fluid phone-mockup" alt="Anteprima App">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Dubbi sul primo match?</h2>
+                <p class="section-subtitle">Ecco come muoverti nell'app.</p>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Come creo una partita?</h5>
+                        <p class="mb-0 text-muted">Tocca il tasto "+" nella home. Scegli il centro sportivo, l'ora e il numero di giocatori mancanti. Il tuo match apparirà subito sulla bacheca di tutti i beachers di Bologna!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Come partecipo a un match?</h5>
+                        <p class="mb-0 text-muted">Scorri la lista delle partite disponibili, quando trovi quella che ti interessa, clicca su "Partecipa". Sei subito dentro il gruppo!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Chi prenota il campo?</h5>
+                        <p class="mb-0 text-muted">L'organizzatore del gruppo si occupa della prenotazione del campo nel centro sportivo scelto. Beach Volley Match Maker non effettua prenotazioni in nessun caso.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Come pago il campo?</h5>
+                        <p class="mb-0 text-muted">Quando arrivi al campo ti organizzi con i compagni per il pagamento. Beach Volley Match Maker non gestisce denaro e non svolge il ruolo di intermediazione creditizia.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> L'app è gratuita?</h5>
+                        <p class="mb-0 text-muted">Sì! l'app è completamente gratuita per tutti i giocatori. Possono apparire pubblicità.</p>
                     </div>
                 </div>
             </div>
@@ -232,7 +309,7 @@
 
     <footer class="text-center">
         <div class="container">
-            <p class="mb-0 text-muted">&copy; 2026 BV Match Maker Bologna. Made with &hearts; for Beachers.</p>
+            <p class="mb-0 text-muted">BV Match Maker. Made with &hearts; for Beachers.</p>
         </div>
     </footer>
 
