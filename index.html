@@ -1,264 +1,243 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Beach Volley, Partite, Trova compagni, Beach Volley Match Maker, Beach Volley Bologna">
     <meta name="author" content="Marco">
     <title>Beach Volley Match Maker | Organizza le tue partite</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/line-icons.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main.css">    
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/jquery-min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-
-    <script src="js/main.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-icons.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
     <style>
-      /* Overlay scuro per far risaltare il bianco */
-      #carousel-area::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.65); 
-        z-index: 1;
-      }
+        :root {
+            --primary-blue: #2260ff;
+            --dark-blue: #1e3d73;
+            --accent-yellow: #ffd700;
+            --text-dark: #333;
+        }
 
-      #carousel-area {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url('img/slider/bg-3-beach.png');
-        background-size: cover;
-        background-position: center;
-        margin-top: 0; /* La navbar è fixed, non serve margine qui */
-        padding-top: 80px;
-        color: #ffffff !important; /* Forza il bianco ovunque */
-        text-align: center;
-      }
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: var(--text-dark); }
 
-      .carousel-caption {
-        position: relative !important;
-        z-index: 2;
-        width: 100% !important;
-        left: 0 !important;
-        padding: 0;
-        margin: 0 auto;
-        color: #ffffff !important;
-      }
+        /* HERO SECTION */
+        #carousel-area {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('img/slider/bg-3-beach.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
 
-      /* Colore del Brand (Testo in alto a sinistra) */
-      .navbar-brand {
-          color: #2260ff !important;
-      }
-
-      /* Cambia il colore della riga decorativa sotto il titolo in blu */
-      .section-header .section-title::before {
-          background-color: #2f5fad !important;
-      }
-
-      /* Se la riga è generata in un altro modo nel tuo template, questo la copre */
-      .section-title::after {
-          background-color: #2f5fad !important;
-      }
-
-      /* Colore dell'icona del menu mobile (Toggle) */
-      .navbar-toggler {
-          background-color: #2260ff !important;
-          border-color: #2260ff !important;
-      }
-
-      /* Colore del pulsante principale (Hero Button) */
-      .btn-common {
-          background: #2260ff !important;
-          border-color: #2260ff !important;
-          color: #fff !important;
-      }
-
-      /* Effetto hover del pulsante */
-      .btn-common:hover {
-          background: #1e3d73 !important;
-          border-color: #1e3d73 !important;
-      }
-
-      .hero-title {
-        font-weight: 800;
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        line-height: 1.1;
-        margin-bottom: 30px;
-        color: #ffffff !important;
-      }
-
-      .benefit-card i {
-        font-size: 30px;
-        color: #ffff20;
-        display: block;
-        margin-bottom: 10px;
-      }
-
-      .benefit-card h6 {
-        color: #ffffff !important;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-      }
-
-      /* Fix per Mobile */
-      @media (max-width: 768px) {
         .hero-title {
-          font-size: 1.4rem !important;
-          margin-bottom: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
+
         .hero-subtext {
-          font-size: 1.2rem !important;
-          padding: 0 10px;
-        }
-        .benefit-card h6 {
-          font-size: 0.7rem;
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .navbar-collapse {
-          background: #fff; /* Sfondo bianco quando il menu è aperto */
-          padding: 20px;
-          border-radius: 5px;
-          box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+        /* BADGES */
+        .app-badge img {
+            height: 45px;
+            transition: transform 0.2s;
         }
-        
-        .nav-item {
-          padding: 10px 0;
-          border-bottom: 1px solid #f1f1f1;
-        }
-      }
+        .app-badge img:hover { transform: scale(1.05); }
 
-      .hero-subtext {
-        color: #ffffff !important;
-        font-size: 1.4rem;
-        line-height: 1.6;
-        margin-bottom: 40px;
-        /* Crea un contrasto leggero con il titolo */
-        opacity: 0.9; 
-      }
+        /* CARDS & ICONS */
+        .benefit-card i {
+            font-size: 40px;
+            color: var(--accent-yellow);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .section-padding { padding: 80px 0; }
+
+        .item-boxes {
+            padding: 40px 20px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .item-boxes:hover { transform: translateY(-10px); }
+
+        /* Fix colore icone su sfondo bianco */
+        .how-it-works-icon {
+            font-size: 45px;
+            color: var(--primary-blue) !important;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--primary-blue);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #f8f9fa;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 1.8rem; }
+            .hero-subtext { font-size: 1.1rem; }
+        }
     </style>
-  </head>
-  
-  <body>
-    <header id="slider-area">  
-      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm">
         <div class="container">
-          <a class="navbar-brand" href="index.html" style="font-weight: bold;">BV MATCH MAKER</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-            <i class="lni-menu"></i>
+            <a class="navbar-brand" href="#" style="color: var(--primary-blue); font-weight: 900;">BV MATCH MAKER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" style="background: var(--primary-blue); border: none;">
+              <i class="lni-menu" style="color: #fff; font-size: 24px;"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link page-scroll" href="#slider-area">Home</a></li>
-              <li class="nav-item"><a class="nav-link page-scroll" href="#how-it-works">Come Funziona</a></li>  
-            </ul>              
-          </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#carousel-area">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#how-it-works">Come Funziona</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#services">Vantaggi</a></li>
+                </ul>
+            </div>
         </div>
-      </nav> 
+    </nav>
 
-      <div id="carousel-area">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-10">
-                      <div class="carousel-caption">
-                        <h2 class="hero-title wow fadeInDown" data-wow-delay="0.3s">
-                            Mai più ricerche disperate per il quarto giocatore.
-                        </h2>
-
-                        <p class="hero-subtext wow fadeInDown" data-wow-delay="0.4s" style="color: #ffffff; margin-bottom: 35px; font-size: 1.1rem; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto;">
-                            L'app dedicata a chi vuole giocare a Beach Volley a Bologna e conoscere gente nuova. 
-                        </p>
-                        
-                        <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.6s" style="margin-bottom: 30px;">
-                          <div class="col-4 benefit-card">
+    <header id="carousel-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="hero-title wow fadeInDown" data-wow-delay="0.3s">
+                        Mai più ricerche disperate<br>per il quarto giocatore.
+                    </h2>
+                    <p class="hero-subtext wow fadeInDown" data-wow-delay="0.4s">
+                        L'app dedicata a chi vuole giocare a Beach Volley a Bologna, conoscere gente nuova e scendere in campo senza stress.
+                    </p>
+                    
+                    <div class="row justify-content-center wow fadeInUp mb-5" data-wow-delay="0.6s">
+                        <div class="col-4 benefit-card">
                             <i class="lni-alarm-clock"></i>
-                            <h6>Organizza un incontro</h6>
-                          </div>
-                          <div class="col-4 benefit-card">
-                            <i class="lni-users"></i>
-                            <h6>Trova Giocatori</h6>
-                          </div>
-                          <div class="col-4 benefit-card">
-                            <i class="lni-emoji-smile"></i>
-                            <h6>Divertiti</h6>
-                          </div>
+                            <h6 class="text-uppercase small font-weight-bold">Organizza</h6>
                         </div>
+                        <div class="col-4 benefit-card">
+                            <i class="lni-users"></i>
+                            <h6 class="text-uppercase small font-weight-bold">Trova Giocatori</h6>
+                        </div>
+                        <div class="col-4 benefit-card">
+                            <i class="lni-emoji-smile"></i>
+                            <h6 class="text-uppercase small font-weight-bold">Gioca</h6>
+                        </div>
+                    </div>
 
-                        <!--<div class="wow fadeInUp" data-wow-delay="0.9s">
-                          <a href="#subscribe" class="btn btn-lg btn-common btn-effect">
-                            VOGLIO ACCEDERE ALLA BETA
-                          </a>
-                        </div>-->
-                        <div>
-                          <div class="footer-social-apps">
-                            
-                              <a href="https://play.google.com/store/apps/details?id=com.techlifeappdev.match_planner&hl=it" onclick="emitFooterNavigationClickEvent('app', 'Social')">
-                                <img width="120" height="33" alt="android store img" src="img/GetItOnGooglePlay_Badge_Web_color_Italian.png">
-                              </a>
-                            
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>  
+                    <div class="app-badge wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="https://play.google.com/store/apps/details?id=com.techlifeappdev.match_planner" class="d-inline-block">
+                            <img src="img/GetItOnGooglePlay_Badge_Web_color_Italian.png" alt="Scarica su Google Play">
+                        </a>
+                        </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- sezione How It Works -->
-    <section id="how-it-works" class="section" style="padding: 80px 0; background: #fff;">
-      <div class="container">
-        <div class="section-header text-center">          
-          <h2 class="section-title" style="font-weight: 800;">Come funziona?</h2>
-          <p class="section-subtitle">Tre step, zero stress. Tutto quello che ti serve è la voglia di giocare.</p>
+    <section id="how-it-works" class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Come funziona?</h2>
+            <p class="mb-5 text-muted">Tre step, zero stress. Tutto quello che ti serve è la voglia di giocare.</p>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="item-boxes wow fadeInUp" data-wow-delay="0.2s">
+                        <i class="lni-target how-it-works-icon"></i>
+                        <h4 class="font-weight-bold">1. Crea il Gruppo</h4>
+                        <p class="text-muted">Crea una partita o unisciti a una esistente. Imposta il livello e lascia che la community faccia il resto.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="item-boxes wow fadeInUp" data-wow-delay="0.4s">
+                        <i class="lni-users how-it-works-icon"></i>
+                        <h4 class="font-weight-bold">2. Riempi il Campo</h4>
+                        <p class="text-muted">Man mano che le persone accettano, il tuo gruppo si riempie automaticamente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="item-boxes wow fadeInUp" data-wow-delay="0.6s">
+                        <i class="lni-phone how-it-works-icon"></i>
+                        <h4 class="font-weight-bold">3. Prenota e Gioca</h4>
+                        <p class="text-muted">Una volta completato il team, basta chiamare il centro sportivo e scendere sulla sabbia.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s" style="text-align: center; padding: 30px;">
-                <i class="lni-users" style="font-size: 30px; color: #ffff20;"></i>
-              <h4 style="font-weight: 700; margin-bottom: 15px;">1. Crea il Gruppo</h4>
-              <p>Unisciti ad una partita o creane una e imposta il livello. Sarà visibile alla community di beachers.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-boxes wow fadeInDown" data-wow-delay="0.4s" style="text-align: center; padding: 30px;">
-                <i class="lni-alarm-clock" style="font-size: 30px; color: #ffff20;"></i>
-              <h4 style="font-weight: 700; margin-bottom: 15px;">2. Riempi il Campo</h4>
-              <p>Man mano che le persone accettano, il tuo gruppo si riempie automaticamente senza dover mandare decine di messaggi su WhatsApp.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="item-boxes wow fadeInDown" data-wow-delay="0.6s" style="text-align: center; padding: 30px;">
-                <i class="lni-phone" style="font-size: 30px; color: #ffff20;"></i>
-              <h4 style="font-weight: 700; margin-bottom: 15px;">3. Chiama e Gioca</h4>
-              <p>Gruppo fatto! Ora basta una veloce chiamata al centro sportivo per prenotare il campo e iniziare la sfida.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-header">          
-          <h2 class="section-title">Perché scegliere Match Maker?</h2>
-          <span>Vantaggi</span>
-          <p class="section-subtitle">I "ti farò sapere" sono solo un brutto ricordo. Smetti di fare il segretario su WhatsApp cercando un orario che metta d'accordo tutti. Con Beach Volley Match Maker trovi persone decise che hanno solo voglia di giocare.</p>
-        </div>
+    <section id="services" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Perché scegliere Match Maker?</h2>
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-6 text-left">
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold text-primary"><i class="lni-check-mark-circle mr-2"></i> Risparmi Tempo</h5>
+                        <p>Smetti di inseguire le persone. Chi si iscrive è pronto a giocare.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold text-primary"><i class="lni-check-mark-circle mr-2"></i> Community Dedicata</h5>
+                        <p>Creato appositamente per i beachers della nostra città.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold text-primary"><i class="lni-check-mark-circle mr-2"></i> Livelli Equilibrati</h5>
+                        <p>Trova compagni e avversari del tuo stesso livello per partite vere.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div style="background: #eee; height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                        <span class="text-muted">[Immagine Anteprima App]</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 BV Match Maker Bologna. Made with &hearts; for Beachers.</p>
+        </div>
+    </footer>
 
     <script src="js/jquery-min.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
