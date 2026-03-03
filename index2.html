@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Beach Volley, Partite, Trova compagni, Beach Volley Match Maker, Beach Volley Bologna">
+    <meta name="author" content="Marco">
+    <title>Beach Volley Match Maker | Organizza le tue partite</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-icons.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #2260ff;
+            --dark-blue: #1e3d73;
+            --accent-yellow: #ffd700;
+            --text-dark: #333;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: var(--text-dark); }
+
+        /* HERO SECTION */
+        #carousel-area {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('img/slider/bg-3-beach.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-title {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* BADGES */
+        .app-badge img {
+            height: 45px;
+            transition: transform 0.2s;
+        }
+        .app-badge img:hover { transform: scale(1.05); }
+
+        /* CARDS & ICONS */
+        .benefit-card i {
+            font-size: 40px;
+            color: var(--accent-yellow);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .section-padding { padding: 80px 0; }
+
+        .item-boxes {
+            padding: 40px 20px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .item-boxes:hover { transform: translateY(-10px); }
+
+        /* Fix colore icone su sfondo bianco */
+        .how-it-works-icon {
+            font-size: 45px;
+            color: var(--primary-blue) !important;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--primary-blue);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #f8f9fa;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 1.8rem; }
+            .hero-subtext { font-size: 1.1rem; }
+        }
+
+        /* Mockup telefono per lo screenshot */
+        .phone-mockup {
+            max-height: 500px;
+            border: 12px solid #333;
+            border-radius: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+
+        /* Sezione Istruzioni/FAQ */
+        .step-number {
+            background: var(--primary-blue);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .faq-card {
+            border: none;
+            background: #f8f9fa;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .faq-card:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: var(--primary-blue); font-weight: 900;">BV MATCH MAKER</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" style="background: var(--primary-blue); border: none;">
+              <i class="lni-menu" style="color: #fff; font-size: 24px;"></i>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#carousel-area">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#how-it-works">Come Funziona</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#services">Vantaggi</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark font-weight-bold" href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="carousel-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="hero-title wow fadeInDown" data-wow-delay="0.3s">
+                        Mai più ricerche disperate<br>per il quarto giocatore.
+                    </h2>
+                    <p class="hero-subtext wow fadeInDown" data-wow-delay="0.4s">
+                        L'app dedicata a chi vuole giocare a Beach Volley a Bologna, conoscere gente nuova e scendere in campo senza stress.
+                    </p>
+                    
+                    <div class="row justify-content-center wow fadeInUp mb-5" data-wow-delay="0.6s">
+                        <div class="col-4 benefit-card">
+                            <i class="lni-alarm-clock"></i>
+                            <h6 class="text-uppercase small font-weight-bold">Organizza</h6>
+                        </div>
+                        <div class="col-4 benefit-card">
+                            <i class="lni-users"></i>
+                            <h6 class="text-uppercase small font-weight-bold">Trova Giocatori</h6>
+                        </div>
+                        <div class="col-4 benefit-card">
+                            <i class="lni-emoji-smile"></i>
+                            <h6 class="text-uppercase small font-weight-bold">Gioca</h6>
+                        </div>
+                    </div>
+
+                    <div class="app-badge wow fadeInUp" data-wow-delay="0.8s">
+                        <a href="https://play.google.com/store/apps/details?id=com.techlifeappdev.match_planner" class="d-inline-block">
+                            <img src="img/GetItOnGooglePlay_Badge_Web_color_Italian.png" alt="Scarica su Google Play">
+                        </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="how-it-works" class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Come funziona?</h2>
+            <p class="mb-5 text-muted">Tre step, zero stress. Tutto quello che ti serve è la voglia di giocare.</p>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="item-boxes wow fadeInUp" data-wow-delay="0.2s">
+                        <i class="lni-target how-it-works-icon"></i>
+                        <h4 class="font-weight-bold">1. Crea il Gruppo</h4>
+                        <p class="text-muted">Crea una partita o unisciti a una esistente. Imposta il livello e lascia che la community faccia il resto.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="item-boxes wow fadeInUp" data-wow-delay="0.4s">
+                        <i class="lni-users how-it-works-icon"></i>
+                        <h4 class="font-weight-bold">2. Riempi il Campo</h4>
+                        <p class="text-muted">Man mano che le persone accettano, il tuo gruppo si riempie automaticamente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="item-boxes wow fadeInUp" data-wow-delay="0.6s">
+                        <i class="lni-phone how-it-works-icon"></i>
+                        <h4 class="font-weight-bold">3. Prenota e Gioca</h4>
+                        <p class="text-muted">Una volta completato il team, basta chiamare il centro sportivo e scendere sulla sabbia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">L'app pensata per i Beachers</h2>
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-6 text-left">
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold text-primary"><i class="lni-check-mark-circle mr-2"></i> Risparmi Tempo</h5>
+                        <p>Smetti di inseguire le persone. Chi si iscrive è pronto a giocare.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold text-primary"><i class="lni-check-mark-circle mr-2"></i> Community Dedicata</h5>
+                        <p>Creato appositamente per i beachers della nostra città.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="font-weight-bold text-primary"><i class="lni-check-mark-circle mr-2"></i> Livelli Equilibrati</h5>
+                        <p>Trova compagni e avversari del tuo stesso livello per partite vere.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="img/app/search_match.jpg" class="img-fluid phone-mockup" alt="Anteprima App">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Dubbi sul primo match?</h2>
+                <p class="section-subtitle">Ecco come muoverti nell'app.</p>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Come creo una partita?</h5>
+                        <p class="mb-0 text-muted">Tocca il tasto "+" nella home. Scegli il centro sportivo, l'ora e il numero di giocatori mancanti. Il tuo match apparirà subito sulla bacheca di tutti i beachers di Bologna!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Come partecipo a un match?</h5>
+                        <p class="mb-0 text-muted">Scorri la lista delle partite disponibili, quando trovi quella che ti interessa, clicca su "Partecipa". Sei subito dentro il gruppo!</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Chi prenota il campo?</h5>
+                        <p class="mb-0 text-muted">L'organizzatore del gruppo si occupa della prenotazione del campo nel centro sportivo scelto. Beach Volley Match Maker non effettua prenotazioni in nessun caso.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> Come pago il campo?</h5>
+                        <p class="mb-0 text-muted">Quando arrivi al campo ti organizzi con i compagni per il pagamento. Beach Volley Match Maker non gestisce denaro e non svolge il ruolo di intermediazione creditizia.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card faq-card p-4">
+                        <h5 class="font-weight-bold"><span class="step-number">?</span> L'app è gratuita?</h5>
+                        <p class="mb-0 text-muted">Sì! l'app è completamente gratuita per tutti i giocatori. Possono apparire pubblicità.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0 text-muted">BV Match Maker. Made with &hearts; for Beachers.</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
